@@ -17,7 +17,7 @@ scope = [
 creds = ServiceAccountCredentials.from_json_keyfile_name("credentials.json", scope)
 client = gspread.authorize(creds)
 
-requests_sheet = client.open("Leave_record").worksheet("Sheet6")
+requests_sheet = client.open("StudentRecords_SAM").worksheet("Active_Records")
 tz = pytz.timezone('Asia/Kolkata')
 
 def check_and_delete_rows():
